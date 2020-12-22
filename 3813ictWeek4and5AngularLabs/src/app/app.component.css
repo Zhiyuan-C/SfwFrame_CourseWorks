@@ -1,0 +1,17 @@
+.nav-link {
+    color: rgb(180, 179, 179);
+}
+
+.active {
+    color: white;
+    font-weight: bold;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+

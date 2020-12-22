@@ -1,0 +1,13 @@
+<form class="form-edit pt-5" method="POST">
+    <h3 class="mb-3 font-weight-normal">Edit your profile</h3>
+    <label for="newEmail" class="sr-only">Email Address</label>
+    <input type="email" id="newEmail" [(ngModel)]="newEmail" name="newEmail" class="form-control" placeholder="{{email}}" required autofocus>
+    <label for="newName" class="sr-only">User name</label>
+    <input type="text" id="newName" [(ngModel)]="newName" name="newName" class="form-control" placeholder="{{username}}" required>
+    <label for="newBirth" class="sr-only">Birthday</label>
+    <input type="text" id="newBirth" [(ngModel)]="newBirth" name="newBirth" class="form-control" placeholder="{{birthdate}}" required>
+    <label for="newAge" class="sr-only">Age</label>
+    <input type="text" id="newAge" [(ngModel)]="newAge" name="newAge" class="form-control" placeholder="{{age}}" required>
+    
+    <button (click)="edit()" class="btn btn-lg btn-dark btn-block mt-3" type="submit">Edit</button>
+</form>
