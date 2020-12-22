@@ -1,0 +1,28 @@
+<h3>Update product</h3>
+<form>
+  <div class="form-group">
+    <label for="productName">Name</label>
+    <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="userInput.productName" [ngClass]="{'border border-danger': error.name.status}">
+    <small *ngIf="error.name.status" class="form-text text-danger">{{error.name.message}}</small>
+  </div>
+
+  <div class="form-group">
+    <label for="productDesc">Description</label>
+    <input type="text" class="form-control" id="productDesc" name="productDesc" [(ngModel)]="userInput.productDesc" [ngClass]="{'border border-danger': error.description.status}">
+    <small *ngIf="error.description.status" class="form-text text-danger">{{error.description.message}}</small>
+  </div>
+
+  <div class="form-group">
+    <label for="productPrice">Price</label>
+    <input type="number" class="form-control" id="productPrice" name="productPrice" [(ngModel)]="userInput.productPrice" [ngClass]="{'border border-danger': error.price.status}">
+    <small *ngIf="error.price.status" class="form-text text-danger">{{error.price.message}}</small>
+  </div>
+
+  <div class="form-group">
+    <label for="productUnits">Units</label>
+    <input type="number" class="form-control" id="productUnits" name="productUnits" [(ngModel)]="userInput.productUnits" [ngClass]="{'border border-danger': error.units.status}">
+    <small *ngIf="error.units.status" class="form-text text-danger">{{error.units.message}}</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="editProduct()">Submit</button>
+</form>
