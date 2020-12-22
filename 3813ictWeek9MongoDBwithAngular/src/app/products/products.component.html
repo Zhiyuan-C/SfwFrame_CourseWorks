@@ -1,0 +1,33 @@
+<ng-container *ngIf="noProduct; else products">
+  <h3>Currently you have 0 products, please add product</h3>
+</ng-container>
+<ng-template #products>
+  <h3> Product list </h3>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Units</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productList">
+            <th scope="row">{{product.id}}</th>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.units }}</td>
+            <td><span class="btn btn-primary" [routerLink]="['/update', product._id]" >Edit</span>
+                &nbsp; <span class="btn btn-danger" (click)="deleteProduct(product._id)">Delete</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+  
+</ng-template>
+
