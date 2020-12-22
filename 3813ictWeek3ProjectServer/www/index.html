@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        <title>Welcome - Login</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="login">
+            <form id="loginForm" method="POST" action="/api/login">
+                <label for="userEmail">Email</label>
+                <input type="email" name="userEmail" id="userEmail"/>
+                <label for="userPassword">Password</label>
+                <input type="password" name="userPassword" id="userPassword"/>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="welcome" class="hide"></div>
+        <div id="error" class="hide">
+            <p>User credential do not match</p>
+        </div>
+    </body>
+</html>
